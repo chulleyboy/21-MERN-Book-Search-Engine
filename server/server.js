@@ -6,10 +6,10 @@ const db = require('./config/connection');
 const { typeDefs, resolvers } = require('./schemas');
 const { start } = require('repl');
 
+
 const PORT = process.env.PORT || 3001;
 const app = express();
 
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/tourney_db');
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
